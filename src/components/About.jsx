@@ -1,6 +1,8 @@
+import { Users, Target, ShieldAlert, Activity, FileText } from 'lucide-react';
 import './About.css';
 
 const About = () => {
+    // ... values ...
     const values = [
         {
             title: "Community partnership over extraction",
@@ -25,11 +27,26 @@ const About = () => {
     ];
 
     const problems = [
-        "Public health programs struggling to build community trust and engagement",
-        "Equity goals without clear data, strategy, or measurable outcomes",
-        "Research and initiatives requiring ethical and regulatory oversight",
-        "Health programs or interventions with low adoption or cultural misalignment",
-        "Grant proposals that need stronger methodology and equity-centered framing"
+        {
+            icon: <Users size={40} strokeWidth={1.5} />,
+            text: "Public health programs struggling to build community trust and engagement"
+        },
+        {
+            icon: <Target size={40} strokeWidth={1.5} />,
+            text: "Equity goals without clear data, strategy, or measurable outcomes"
+        },
+        {
+            icon: <ShieldAlert size={40} strokeWidth={1.5} />,
+            text: "Research and initiatives requiring ethical and regulatory oversight"
+        },
+        {
+            icon: <Activity size={40} strokeWidth={1.5} />,
+            text: "Health programs or interventions with low adoption or cultural misalignment"
+        },
+        {
+            icon: <FileText size={40} strokeWidth={1.5} />,
+            text: "Grant proposals that need stronger methodology and equity-centered framing"
+        }
     ];
 
     return (
@@ -61,12 +78,12 @@ const About = () => {
 
                 {/* Problems I Help Solve */}
                 <div className="about-problems">
-                    <h3>Problems I Help Solve</h3>
+                    <h3 className="text-center">Problems I Help Solve</h3>
                     <div className="problems-grid">
                         {problems.map((problem, i) => (
                             <div key={i} className="problem-item">
-                                <span className="problem-icon">→</span>
-                                <p>{problem}</p>
+                                <div className="problem-icon-wrapper">{problem.icon}</div>
+                                <p>{problem.text}</p>
                             </div>
                         ))}
                     </div>

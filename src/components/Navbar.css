@@ -124,7 +124,8 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+/* Mobile Responsive */
+@media (max-width: 992px) {
   .mobile-menu-btn {
     display: block;
     z-index: 1001;
@@ -177,9 +178,17 @@
     right: -100%;
     height: 100vh;
     width: 70%;
+    max-width: 300px;
+    /* Limit width */
     background-color: var(--color-surface);
+    display: flex;
+    /* Ensure flex is active */
     flex-direction: column;
-    padding-top: 5rem;
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 1.5rem;
+    /* Adjust gap for vertical stack */
     box-shadow: var(--shadow-lg);
     transition: right 0.3s ease;
   }
@@ -190,5 +199,25 @@
 
   .nav-cta-btn {
     margin-top: 1rem;
+    width: 100%;
+    /* Full width button in menu */
+    text-align: center;
+    box-sizing: border-box;
+    /* Ensure padding doesn't overflow */
+  }
+
+  /* Scale down brand on smaller screens */
+  .brand-main {
+    font-size: 1.3rem;
+  }
+
+  .brand-sub {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    width: 85%;
   }
 }

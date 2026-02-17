@@ -1,24 +1,25 @@
+import { Sprout, Heart, ClipboardCheck, Scale } from 'lucide-react';
 import './Methodology.css';
 
 const Methodology = () => {
     const principles = [
         {
-            icon: '🌱',
+            icon: <Sprout size={48} strokeWidth={1.5} />,
             title: 'Community Centered',
             text: 'Community centered and co-designed approaches that meaningfully engage participants and stakeholders throughout the research and planning process.'
         },
         {
-            icon: '💛',
+            icon: <Heart size={48} strokeWidth={1.5} />,
             title: 'Trauma Informed',
             text: 'Trauma informed and culturally responsive practices that prioritize safety, respect, consent, and trust.'
         },
         {
-            icon: '📋',
+            icon: <ClipboardCheck size={48} strokeWidth={1.5} />,
             title: 'Funder Ready',
             text: 'Funder ready methods that meet regulatory, ethical, and compliance standards.'
         },
         {
-            icon: '⚖️',
+            icon: <Scale size={48} strokeWidth={1.5} />,
             title: 'Ethics & Experience',
             text: 'Work grounded in public health ethics and lived experience to ensure relevance, accountability, and impact.'
         }
