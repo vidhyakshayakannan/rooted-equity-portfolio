@@ -16,10 +16,7 @@ const Footer = () => {
 
                     <div className="footer-contact">
                         <h4>Get in Touch</h4>
-                        <a href="mailto:dinahamideh@gmail.com" className="footer-link">
-                            <span className="footer-link-icon">✉</span>
-                            dinahamideh@gmail.com
-                        </a>
+
                         <a href="https://www.linkedin.com/in/dina-hamideh-phd-ms-a8a62330" target="_blank" rel="noopener noreferrer" className="footer-link">
                             <span className="footer-link-icon">in</span>
                             LinkedIn

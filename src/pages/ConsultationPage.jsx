@@ -66,9 +66,7 @@ const ConsultationPage = () => {
                         <div className="success-icon">✓</div>
                         <h2>Thank You!</h2>
                         <p>Your consultation request has been received. I will review your inquiry and respond within 2 business days.</p>
-                        <p className="success-contact">
-                            For urgent matters, please email <a href="mailto:dinahamideh@gmail.com">dinahamideh@gmail.com</a> directly.
-                        </p>
+
                     </div>
                 </div>
             </section>
@@ -202,13 +200,7 @@ const ConsultationPage = () => {
                             </div>
                         </div>
 
-                        <div className="sidebar-card sidebar-contact">
-                            <h4>Prefer Email?</h4>
-                            <p>You can also reach out directly at:</p>
-                            <a href="mailto:dinahamideh@gmail.com" className="sidebar-email">
-                                dinahamideh@gmail.com
-                            </a>
-                        </div>
+
                     </div>
                 </div>
             </div>
