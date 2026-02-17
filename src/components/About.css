@@ -41,6 +41,7 @@
 .problems-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -49,12 +50,20 @@
     display: flex;
     gap: 1rem;
     align-items: flex-start;
-    flex: 1 1 400px;
-    /* Grow to fill space */
+    flex: 0 1 calc(45% - 1rem);
+    /* Uniform width, centered last item */
+    min-width: 300px;
     background: white;
     padding: 2rem;
     border-radius: var(--radius-md);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.problem-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    /* Aesthetic lift */
 }
 
 .problem-icon {
@@ -186,7 +195,9 @@
         margin: 0 auto;
     }
 
-    .problems-grid {
-        grid-template-columns: 1fr;
+    .problem-item {
+        flex: 1 1 100%;
+        /* Full width on mobile */
+        max-width: 100%;
     }
 }
