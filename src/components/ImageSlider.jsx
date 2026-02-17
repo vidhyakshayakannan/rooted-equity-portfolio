@@ -3,8 +3,8 @@ import './ImageSlider.css';
 
 const images = Array.from({ length: 21 }, (_, i) => {
     const num = i + 1;
-    // Skip gallery-03 as it is used in the About page
-    if (num === 3) return null;
+    // Skip gallery-03 (About portrait) and gallery-15 (Duplicate projector screen)
+    if (num === 3 || num === 15) return null;
     return {
         src: `/images/gallery-${String(num).padStart(2, '0')}.jpeg`,
         alt: `Community health and fieldwork photo ${num}`

@@ -11,16 +11,51 @@ const ConsultationPage = () => {
         message: ''
     });
     const [submitted, setSubmitted] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
+    const [error, setError] = useState(null);
 
     const handleChange = (e) => {
         setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // For now, log and show confirmation. Can be wired to a backend later.
-        console.log('Consultation request:', formData);
-        setSubmitted(true);
+        setSubmitting(true);
+        setError(null);
+
+        // Submitting to Formspree (Replace YOUR_FORM_ID_HERE with your actual Formspree ID)
+        try {
+            const response = await fetch("https://formspree.io/f/YOUR_FORM_ID_HERE", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                setSubmitted(true);
+                setFormData({
+                    name: '',
+                    email: '',
+                    organization: '',
+                    role: '',
+                    service: '',
+                    message: ''
+                });
+            } else {
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    setError(data.errors.map(error => error.message).join(", "));
+                } else {
+                    setError("Oops! There was a problem submitting your form. Please try again or email directly.");
+                }
+            }
+        } catch (err) {
+            setError("There was a problem submitting your form. Please check your internet connection and try again.");
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     if (submitted) {
