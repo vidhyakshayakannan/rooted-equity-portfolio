@@ -29,7 +29,10 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-content">
         <Link to="/" className="navbar-brand">
-          <span className="brand-rooted">Rooted Equity</span>
+          <div className="brand-container">
+            <span className="brand-main">Rooted Equity</span>
+            <span className="brand-sub">Public Health Consulting</span>
+          </div>
         </Link>
 
         <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">

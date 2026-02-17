@@ -22,21 +22,43 @@
 }
 
 .navbar-brand {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
-  cursor: pointer;
   text-decoration: none;
 }
 
-.navbar-brand:hover {
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.brand-main {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: -0.02em;
+}
+
+.brand-sub {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-secondary);
+  /* Using secondary/accent color for elegance */
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.navbar-brand:hover .brand-main {
   color: var(--color-primary);
 }
 
 .navbar-links {
   display: flex;
-  gap: 1.75rem;
+  gap: 2.5rem;
+  /* Increased gap for equal, spacious look */
   align-items: center;
 }
 
