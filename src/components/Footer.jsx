@@ -7,8 +7,11 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-top">
                     <div className="footer-brand">
-                        <h3>Rooted Equity</h3>
-                        <p>Public Health Consulting</p>
+                        <img src="/logo.svg" alt="Rooted Equity Logo" className="footer-logo" />
+                        <div>
+                            <h3>Rooted Equity</h3>
+                            <p>Public Health Consulting</p>
+                        </div>
                     </div>
 
                     <div className="footer-contact">

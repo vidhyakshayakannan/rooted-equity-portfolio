@@ -2,15 +2,6 @@ import './Research.css';
 
 const publications = [
     {
-        authors: 'Hamideh, Dina & Al Zabadi, Hamzeh & Crespo, Noe & Alcaraz, John & Mansour, Mariam & Real, Marcos & Hamideh, Baseel & Ahmadi, Nargis & Mahmoud, Lamees & Strong, David',
-        year: '2025',
-        title: 'The "pressure" of being an adolescent in the West Bank, Palestine: prevalence of prehypertension and hypertension',
-        journal: 'Frontiers in Public Health',
-        volume: '13',
-        doi: '10.3389/fpubh.2025.1620629',
-        link: 'https://doi.org/10.3389/fpubh.2025.1620629'
-    },
-    {
         authors: 'Hamideh, Dina & Al Zabadi, Hamzeh & Mahmoud, Lamees & Bridi, Lana',
         year: '2026',
         title: '"Will It Be Used for Me or Against Me?": A Qualitative Study on the Use of Mobile Health Interventions Among Adolescents and Parents Living in Palestine',
@@ -29,13 +20,13 @@ const publications = [
         link: null
     },
     {
-        authors: 'Hamideh, D., Nebeker, C.',
-        year: '2020',
-        title: 'The Digital Health Landscape in Addiction and Substance Use Research: Will Digital Health Exacerbate or Mitigate Health Inequities in Vulnerable Populations?',
-        journal: 'Current Addiction Reports',
-        volume: '7, 317–332',
-        doi: '10.1007/s40429-020-00325-9',
-        link: 'https://doi.org/10.1007/s40429-020-00325-9'
+        authors: 'Hamideh, Dina & Al Zabadi, Hamzeh & Crespo, Noe & Alcaraz, John & Mansour, Mariam & Real, Marcos & Hamideh, Baseel & Ahmadi, Nargis & Mahmoud, Lamees & Strong, David',
+        year: '2025',
+        title: 'The "pressure" of being an adolescent in the West Bank, Palestine: prevalence of prehypertension and hypertension',
+        journal: 'Frontiers in Public Health',
+        volume: '13',
+        doi: '10.3389/fpubh.2025.1620629',
+        link: 'https://doi.org/10.3389/fpubh.2025.1620629'
     },
     {
         authors: 'Taylor, Jennifer & Allman-Farinelli, Margaret & Chen, Juliana & Gauglitz, Julia & Hamideh, Dina & Jankowska, Marta & Johnson, Abigail & Rangan, Anna & Spruijt-Metz, Donna & Yang, Jiue-An & Hekler, Eric',
@@ -54,6 +45,15 @@ const publications = [
         volume: '3',
         doi: '10.1016/S2589-7500(21)00064-9',
         link: 'https://doi.org/10.1016/S2589-7500(21)00064-9'
+    },
+    {
+        authors: 'Hamideh, D., Nebeker, C.',
+        year: '2020',
+        title: 'The Digital Health Landscape in Addiction and Substance Use Research: Will Digital Health Exacerbate or Mitigate Health Inequities in Vulnerable Populations?',
+        journal: 'Current Addiction Reports',
+        volume: '7, 317–332',
+        doi: '10.1007/s40429-020-00325-9',
+        link: 'https://doi.org/10.1007/s40429-020-00325-9'
     },
     {
         authors: 'Hamideh, Dina & Arellano, Bianca & Topol, Eric & Steinhubl, Steven',
@@ -79,7 +79,7 @@ const Research = () => {
     return (
         <section className="section section-bg page-content">
             <div className="container">
-                <h2 className="section-title text-center">Research &amp; Recent Publications</h2>
+                <h2 className="section-title text-center">Research and Publications</h2>
 
                 <div className="publications-list">
                     {publications.map((pub, i) => (
