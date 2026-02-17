@@ -1,15 +1,28 @@
 import { useState, useEffect, useCallback } from 'react';
 import './ImageSlider.css';
 
-const images = Array.from({ length: 21 }, (_, i) => {
-    const num = i + 1;
-    // Skip gallery-03 (About portrait) and gallery-15 (Duplicate projector screen)
-    if (num === 3 || num === 15) return null;
-    return {
-        src: `/images/gallery-${String(num).padStart(2, '0')}.jpeg`,
-        alt: `Community health and fieldwork photo ${num}`
-    };
-}).filter(Boolean);
+const images = [
+    { src: '/gallery_new/Speaking 3.jpeg', alt: 'Keynote speech' },
+    { src: '/gallery_new/Speaking 1.jpeg', alt: 'Speaking engagement' },
+    { src: '/gallery_new/MH workshop 3.jpeg', alt: 'Workshop discussion circle' },
+    { src: '/gallery_new/blurred_man_presentation.png', alt: 'Presentation materials' },
+    { src: '/gallery_new/qual data MH.jpeg', alt: 'Qualitative analysis chart' },
+    { src: '/gallery_new/MH 2.jpeg', alt: 'Mental health workshop scene' },
+    { src: '/gallery_new/Speaking 2.jpeg', alt: 'Conference presentation' },
+    { src: '/gallery_new/MH 5.jpeg', alt: 'Interactive group work' },
+    { src: '/gallery_new/MH 4.jpeg', alt: 'Training facilitation' },
+    { src: '/gallery_new/3424A0BB-C75F-4CE3-85C2-DA2C536169A0_4_5005_c.jpeg', alt: 'Group discussion' },
+    { src: '/gallery_new/20284824-33B7-4C92-BAAE-8616194BC5FC_4_5005_c.jpeg', alt: 'Community engagement meeting' },
+    { src: '/gallery_new/87F331F8-7DEF-4517-9578-90A4530F1BC3_4_5005_c.jpeg', alt: 'Community event gathering' },
+    { src: '/gallery_new/38BE1E10-780A-4CCB-8E63-C3A56026A181_4_5005_c.jpeg', alt: 'Workshop participation' },
+    { src: '/gallery_new/E03FDB82-D83B-46C1-92D7-B814E23C25BD_4_5005_c.jpeg', alt: 'Planning session' },
+    { src: '/gallery_new/08FA5F31-1508-4B34-A0BC-933094CDE361_4_5005_c.jpeg', alt: 'Interactive training session' },
+    { src: '/gallery_new/0538656B-9D4D-434C-AC63-7F93F3F05873_4_5005_c.jpeg', alt: 'Community workshop activity' },
+    { src: '/gallery_new/A3B116AA-D1D2-48B2-AC75-0E2B571381B1_4_5005_c.jpeg', alt: 'Fieldwork documentation' },
+    { src: '/gallery_new/6522EA03-91C6-430B-BE31-2109503FAD85_4_5005_c.jpeg', alt: 'Feedback session' },
+    { src: '/gallery_new/data_review_1.png', alt: 'Data review and analysis' },
+    { src: '/gallery_new/data_review_2.png', alt: 'Field notes and documentation' }
+];
 
 const ImageSlider = () => {
     const [current, setCurrent] = useState(0);
@@ -28,7 +41,7 @@ const ImageSlider = () => {
         if (isPaused) return;
         const timer = setInterval(next, 4000);
         return () => clearInterval(timer);
-    }, [next, isPaused]);
+    }, [next, isPaused, current]);
 
     return (
         <section className="slider-section">
@@ -48,12 +61,12 @@ const ImageSlider = () => {
                     </button>
 
                     <div className="slider-viewport">
-                        <div
-                            className="slider-track"
-                            style={{ transform: `translateX(-${current * 100}%)` }}
-                        >
+                        <div className="slider-track">
                             {images.map((img, i) => (
-                                <div key={i} className="slider-slide">
+                                <div
+                                    key={i}
+                                    className={`slider-slide ${i === current ? 'active' : ''}`}
+                                >
                                     <img src={img.src} alt={img.alt} loading="lazy" />
                                 </div>
                             ))}

@@ -148,21 +148,26 @@
 
     .tabs-nav {
         min-width: 100%;
-        flex-direction: row;
-        overflow-x: auto;
+        flex-direction: column;
+        /* Stack vertically for visibility */
+        overflow-x: visible;
     }
 
     .tab-btn {
-        white-space: nowrap;
-        padding: 1rem;
-        font-size: 0.85rem;
-        border-left: none;
-        border-bottom: 3px solid transparent;
+        white-space: normal;
+        /* Allow text wrap */
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+        border-left: 4px solid transparent;
+        /* Restore left border style */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: left;
     }
 
     .tab-btn.active {
-        border-left: none;
-        border-bottom-color: var(--color-secondary);
+        border-left-color: var(--color-secondary);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.12);
     }
 
     .tab-content {

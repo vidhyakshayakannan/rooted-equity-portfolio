@@ -15,11 +15,15 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-contact">
-                        <h4>Get in Touch</h4>
+                        <h4>Connect & Collaborate</h4>
 
                         <a href="https://www.linkedin.com/in/dina-hamideh-phd-ms-a8a62330" target="_blank" rel="noopener noreferrer" className="footer-link">
                             <span className="footer-link-icon">in</span>
                             LinkedIn
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Dina-Hamideh" target="_blank" rel="noopener noreferrer" className="footer-link">
+                            <span className="footer-link-icon">RG</span>
+                            ResearchGate
                         </a>
                     </div>
 

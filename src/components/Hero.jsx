@@ -18,7 +18,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-visual">
                     <img
-                        src="/images/fieldwork-1.jpg"
+                        src="/gallery_new/blurred_man_presentation.png"
                         alt="Community health research and engagement in action"
                         className="hero-image"
                     />

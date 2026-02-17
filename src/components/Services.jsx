@@ -60,6 +60,30 @@ const servicesData = [
         ]
     },
     {
+        id: 'research-funding',
+        title: 'Research, Funding & Contractual Support',
+        who: 'Academic institutions, federal and state agencies, research centers, and community–academic partnerships advancing public health and health equity initiatives.',
+        whatIDo: 'I provide strategic support for sponsored research and public health initiatives, strengthening proposals, protocols, and contractual frameworks to ensure methodological rigor, regulatory compliance, and alignment with sponsor priorities.',
+        problems: [
+            'Strong ideas that struggle to secure competitive funding.',
+            'Research plans that lack clarity, regulatory readiness, or analytic precision.',
+            'Partnerships and contracts without clearly defined roles, deliverables, or compliance structures.'
+        ],
+        servicesInclude: [
+            'Grant proposal development for federal, state, and foundation sponsors',
+            'Research protocol design and IRB-ready documentation',
+            'Data management and analytic plan development',
+            'Scope of work drafting and deliverable structuring',
+            'MOUs, subaward language, and partnership agreements'
+        ],
+        whatYouGet: [
+            'Competitive, well-positioned proposals aligned with review criteria and guidance requirements',
+            'Methodologically rigorous and regulation-ready research protocols',
+            'Clear, structured agreements that support accountability and implementation',
+            'Strategic alignment between funding mechanisms, research design, and program execution'
+        ]
+    },
+    {
         id: 'speaking',
         title: 'Speaking & Facilitations',
         who: 'Public health organizations, nonprofits, agencies, academic partners, and coalitions',
@@ -132,19 +156,52 @@ const Services = () => {
                             <p>{active.who}</p>
                         </div>
 
-                        <div className="tab-detail">
-                            <span className="tab-label">{active.isSpeaking ? 'Problems It Solves' : 'Problem It Solves'}</span>
-                            <p>{active.problem}</p>
-                        </div>
+                        {active.whatIDo && (
+                            <div className="tab-detail">
+                                <span className="tab-label">What I Do</span>
+                                <p>{active.whatIDo}</p>
+                            </div>
+                        )}
 
                         <div className="tab-detail">
-                            <span className="tab-label">{active.isSpeaking ? 'Services Include & What You Get' : 'Deliverables'}</span>
-                            <ul className="deliverables-list">
-                                {active.deliverables.map((item, i) => (
-                                    <li key={i}>{item}</li>
-                                ))}
-                            </ul>
+                            <span className="tab-label">{active.isSpeaking || active.problems ? 'Problems It Solves' : 'Problem It Solves'}</span>
+                            {active.problems ? (
+                                <ul className="deliverables-list">
+                                    {active.problems.map((item, i) => <li key={i}>{item}</li>)}
+                                </ul>
+                            ) : (
+                                <p>{active.problem}</p>
+                            )}
                         </div>
+
+                        {active.servicesInclude && (
+                            <div className="tab-detail">
+                                <span className="tab-label">Services Include</span>
+                                <ul className="deliverables-list">
+                                    {active.servicesInclude.map((item, i) => <li key={i}>{item}</li>)}
+                                </ul>
+                            </div>
+                        )}
+
+                        {active.whatYouGet && (
+                            <div className="tab-detail">
+                                <span className="tab-label">What You Get</span>
+                                <ul className="deliverables-list">
+                                    {active.whatYouGet.map((item, i) => <li key={i}>{item}</li>)}
+                                </ul>
+                            </div>
+                        )}
+
+                        {active.deliverables && (
+                            <div className="tab-detail">
+                                <span className="tab-label">{active.isSpeaking ? 'Services Include & What You Get' : 'Deliverables'}</span>
+                                <ul className="deliverables-list">
+                                    {active.deliverables.map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 </div>
 
