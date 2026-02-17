@@ -1,0 +1,181 @@
+.services-intro {
+    max-width: 750px;
+    margin: 0 auto 3rem;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+}
+
+.services-tabs {
+    display: flex;
+    gap: 0;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.tabs-nav {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    background: var(--color-primary-dark);
+}
+
+.tab-btn {
+    padding: 1.25rem 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: var(--font-body);
+    transition: all 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.tab-btn.active {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    border-left-color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.tab-content {
+    padding: 2.5rem;
+    flex: 1;
+}
+
+.tab-content h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-detail {
+    margin-bottom: 1.5rem;
+}
+
+.tab-label {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.tab-detail p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.deliverables-list {
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+.deliverables-list li {
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* How We Work subsection within Services */
+.methodology-subsection {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--color-border);
+}
+
+.methodology-heading {
+    font-size: 1.75rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 2.5rem;
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.methodology-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.methodology-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.methodology-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.methodology-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+.methodology-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .services-tabs {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .tabs-nav {
+        min-width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .tab-btn {
+        white-space: nowrap;
+        padding: 1rem;
+        font-size: 0.85rem;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .tab-btn.active {
+        border-left: none;
+        border-bottom-color: var(--color-secondary);
+    }
+
+    .tab-content {
+        padding: 1.5rem;
+    }
+
+    .methodology-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .methodology-grid {
+        grid-template-columns: 1fr;
+    }
+}

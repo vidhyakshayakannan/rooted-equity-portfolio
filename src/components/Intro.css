@@ -1,0 +1,77 @@
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.intro-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--color-primary);
+}
+
+.intro-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.intro-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro-list {
+    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+.intro-list li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+.intro-bridge {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.intro-bridge p {
+    font-size: 1.125rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    margin: 0;
+}
+
+.intro-subtext {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+}
+
+.intro-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-bridge {
+        padding: 1.5rem;
+    }
+}
