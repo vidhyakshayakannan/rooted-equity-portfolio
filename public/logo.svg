@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base/Roots -->
+  <path d="M32 54 L32 60 M32 54 L24 60 M32 54 L40 60" stroke="#5C4A3A" stroke-width="4" stroke-linecap="round" fill="none"/>
+  
+  <!-- Stem -->
+  <path d="M32 54 Q32 35 32 18" stroke="#8B7355" stroke-width="4" stroke-linecap="round" fill="none"/>
+  
+  <!-- Left Leaf -->
+  <path d="M32 38 Q20 30 18 18 Q32 24 32 38" fill="#8B7355" stroke="#8B7355" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Right Leaf -->
+  <path d="M32 28 Q44 20 46 8 Q32 14 32 28" fill="#C4956A" stroke="#C4956A" stroke-width="2" stroke-linejoin="round"/>
+</svg>
